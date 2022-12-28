@@ -12,6 +12,7 @@ env:
   LOCATION: "East Asia"
   HOSTINGPLANNAME: "library1-plan"
   APPINSIGHTLOCATION: "East Asia"
+  SONAR_HOST_URL: "https://20.255.58.60/"
   SKU: "B1 Basic"
 
 jobs:
@@ -39,12 +40,12 @@ jobs:
    #     pip install pycmd
    #     py.cleanup Tests/
    
-   # - uses: actions/checkout@v2
-   #   with:
-   #     fetch-depth: 0
-   # - uses: sonarsource/sonarqube-scan-action@master
-   #   env:
-   #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - uses: sonarsource/sonarqube-scan-action@master
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         
     # Uploading unit test results to artifact store
     - name: Upload unit test results to Artifact
