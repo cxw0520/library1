@@ -12,7 +12,7 @@ env:
   LOCATION: "East Asia"
   HOSTINGPLANNAME: "library1-plan"
   APPINSIGHTLOCATION: "East Asia"
-  SONAR_HOST_URL: "https://20.255.58.60/"
+  SONAR_HOST_URL: "http://20.255.58.60/"
   SKU: "B1 Basic"
 
 jobs:
